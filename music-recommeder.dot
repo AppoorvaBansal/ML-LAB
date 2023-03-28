@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Age <= 26.5\nentropy = 2.76\nsamples = 22\nvalue = [5, 3, 3, 3, 3, 2, 3]\nclass = CLASSICAL", fillcolor="#fcf2ea"] ;
+1 [label="Age <= 19.5\nentropy = 1.981\nsamples = 11\nvalue = [0, 3, 3, 0, 3, 2, 0]\nclass = DANCE", fillcolor="#ffffff"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Gender <= 0.5\nentropy = 0.971\nsamples = 5\nvalue = [0, 0, 0, 0, 3, 2, 0]\nclass = POP", fillcolor="#bdc7f6"] ;
+1 -> 2 ;
+3 [label="entropy = 0.0\nsamples = 2\nvalue = [0, 0, 0, 0, 0, 2, 0]\nclass = POPULAR", fillcolor="#b139e5"] ;
+2 -> 3 ;
+4 [label="entropy = 0.0\nsamples = 3\nvalue = [0, 0, 0, 0, 3, 0, 0]\nclass = POP", fillcolor="#3956e5"] ;
+2 -> 4 ;
+5 [label="Gender <= 0.5\nentropy = 1.0\nsamples = 6\nvalue = [0, 3, 3, 0, 0, 0, 0]\nclass = DANCE", fillcolor="#ffffff"] ;
+1 -> 5 ;
+6 [label="entropy = 0.0\nsamples = 3\nvalue = [0, 3, 0, 0, 0, 0, 0]\nclass = DANCE", fillcolor="#b7e539"] ;
+5 -> 6 ;
+7 [label="entropy = 0.0\nsamples = 3\nvalue = [0, 0, 3, 0, 0, 0, 0]\nclass = HIP HOP", fillcolor="#39e54d"] ;
+5 -> 7 ;
+8 [label="Age <= 30.5\nentropy = 1.539\nsamples = 11\nvalue = [5, 0, 0, 3, 0, 0, 3]\nclass = CLASSICAL", fillcolor="#f8e0ce"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="Gender <= 0.5\nentropy = 1.0\nsamples = 6\nvalue = [0, 0, 0, 3, 0, 0, 3]\nclass = JAZZ", fillcolor="#ffffff"] ;
+8 -> 9 ;
+10 [label="entropy = 0.0\nsamples = 3\nvalue = [0, 0, 0, 3, 0, 0, 0]\nclass = JAZZ", fillcolor="#39e5e2"] ;
+9 -> 10 ;
+11 [label="entropy = 0.0\nsamples = 3\nvalue = [0, 0, 0, 0, 0, 0, 3]\nclass = ROCK", fillcolor="#e53986"] ;
+9 -> 11 ;
+12 [label="entropy = 0.0\nsamples = 5\nvalue = [5, 0, 0, 0, 0, 0, 0]\nclass = CLASSICAL", fillcolor="#e58139"] ;
+8 -> 12 ;
+}
